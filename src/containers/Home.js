@@ -11,7 +11,7 @@ class Home extends React.Component {
         return (
             <div>
                 <NavBar />
-                Home Picture
+                <img src="/image/jamie-street-562280-unsplash.png" alt="dog"></img>
                 <FindAdopt />
                 <HowAdoptionWorks />
                 <SuccessStories />
