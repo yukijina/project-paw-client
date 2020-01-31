@@ -1,0 +1,29 @@
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    
+    &:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+// 3 columns in desktop, 2 gutter(6rem) and 3 columns
+.col { 
+    float: left;
+    width: calc((100% - 2 * 6rem) / 3);
+    background-color: pink;
+
+    &:not(:last-child) {
+        margin-right: 6rem;
+        margin-bottom: 6rem;
+    }
+ 
+}
+

@@ -1,0 +1,68 @@
+@import 'src/sass/main';
+
+.support {
+    background-image: url("/image/support-pagev2-adorable-animal-blur-850602.png");
+    background-size: cover;
+    background-position: top;
+    height: 63.5rem;
+    position: relative;
+    backface-visibility: hidden;
+    margin-bottom: 10rem;
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+
+    &__text-main,
+    &__text-sub {
+        color: $color-white;
+       text-align: center;
+    }
+
+    &__text-main {
+        animation: moveInLeft 1s ease-out;
+    }
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        /* translate 0 looks normal */
+        transform: translate(0);
+    }
+}
+
+.info {
+    width: $grid-width;
+    margin: 0 auto;
+
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__col {
+        margin-left: 4%;
+        flex: 0 0 44%;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.btn--purple { 
+    background-color: $color-purple;
+    color: $color-white;
+}

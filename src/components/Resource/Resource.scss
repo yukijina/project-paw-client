@@ -1,0 +1,82 @@
+@import 'src/sass/main';
+
+.resource {
+    background-image: url("/image/resources-pagv2-jamie-street-489918-unsplash.png");
+    background-size: cover;
+    background-position: top;
+    height: 63.5rem;
+    position: relative;
+    backface-visibility: hidden;
+    margin-bottom: 10rem;
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+
+    &__text-main,
+    &__text-sub {
+        color: $color-white;
+       text-align: center;
+    }
+
+    &__text-main {
+        animation: moveInLeft 1s ease-out;
+    }
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        /* translate 0 looks normal */
+        transform: translate(0);
+    }
+}
+
+// FLEXBOX
+.info {
+    width: $grid-width;
+    margin: 0 auto;
+
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 0 $gutter-bottom 0;
+    }
+
+    &__col {
+        flex: 0 0 $flexcol-1-of-2;
+        
+        &:first-child {
+            margin-left: $gutter-edge;
+            margin-right: $gutter-center;
+        }
+        &:last-child {
+            margin-left: 0;
+            margin-right: $gutter-edge;
+        }
+    }
+    
+    &__col-wrapper {
+        background-color: $color-purple;
+    }
+    &__col-img {
+        width: 100%;
+        min-height: 37rem;
+    }
+    &__col-text {
+        height: 8rem;
+        color: $color-white;
+        text-align: center;
+    }
+}

@@ -1,0 +1,38 @@
+.main {
+    background-image: url("/image/jamie-street-562280-unsplash.png");
+    height: 74.5rem;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* Prevent shakiness for aniation */
+    backface-visibility: hidden;
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+
+    &__text {
+        color: #fcfcfc;
+        /* h1 text display one line */
+        white-space: nowrap; 
+        animation: moveInLeft 1s ease-out;
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        /* translate 0 looks normal */
+        transform: translate(0);
+    }
+}
