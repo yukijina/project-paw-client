@@ -1,0 +1,31 @@
+.btn,
+.btn:visited {
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    transition: all .2s;
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-purple;
+    }
+
+    &--purple {
+        background-color: $color-purple;
+        color: $color-white;
+    }
+
+}
